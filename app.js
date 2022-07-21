@@ -76,7 +76,7 @@ let humanData = ( function() {
       return `You weigh less than the ${this.species.toLowerCase()} by ${this.weight - hooman.weight}lbs.`
     }
     else {
-      return `You weigh the same as the ${this.species.toLowerCase}.`
+      return `You weigh the same as the ${this.species.toLowerCase()}.`
     }
   }
 
