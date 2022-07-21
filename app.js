@@ -76,7 +76,7 @@ let humanData = ( function() {
       return `You weigh less than the ${this.species.toLowerCase()} by ${this.weight - hooman.weight}lbs.`
     }
     else {
-      return `You weigh the same as the ${this.species.toLowerCase()}.`
+      return `You weigh the same as the ${this.species.toLowerCase}.`
     }
   }
 
@@ -127,7 +127,6 @@ function makeGrid(myArray,humanObj) {
     // Human object 'if' block
     if (item.species === 'human') {
       h3.append(item.name)
-      console.log(h3)
       div.appendChild(h3);
       let img = document.createElement('img');
       img.src = 'images/' + item.species.toLowerCase()+'.png';
@@ -169,7 +168,8 @@ function makeGrid(myArray,humanObj) {
 let submitButton = document.getElementById('btn');
 submitButton.addEventListener('click',function(){
   // Create human object from humanData array.
-  let human = new Human(humanData()[0],humanData()[1],humanData()[2],humanData()[3],humanData()[4]);
+  let humanDataArray = humanData();
+  let human = new Human(humanDataArray[0],humanDataArray[1],humanDataArray[2],humanDataArray[3],humanDataArray[4]);
   // Generate Tiles for each Dino in Array
   let compArray = [triceratops,trex,anklyosaurus,brachiosaurus,human,stegosaurus,pigeon,elasmosaurus,pteranodon];
   let grid = document.getElementById('grid');
